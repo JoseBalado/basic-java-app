@@ -20,7 +20,15 @@ public class App {
     comparison = stringComparatorLambda.compare("hello", "world");
     System.out.println(comparison);
 
-    MyFunction myFunction = text -> System.out.println(text);
+    final String textExternal = "Text External";
+
+    MyFunction myFunction = text -> {
+      String textInternal = " Pepe";
+      System.out.println(text + textInternal + textExternal);
+
+      textInternal = " Manolo";
+      System.out.println(text + textInternal);
+    };
 
     myFunction.apply("Hello");
   }
