@@ -1,35 +1,27 @@
 package com.mycompany.app;
 
-import java.util.Comparator;
-
 public class App {
-  public static void main(String[] args) {
-    Comparator<String> stringComparator = new Comparator<String>() {
-      @Override
-      public int compare(String o1, String o2) {
-        return o1.compareTo(o2);
-      }
-    };
+    public static void main(String[] args) {
+        ChangeArgSeq changeArgSeq = new ChangeArgSeq();
+        double avg = changeArgSeq.average(10, 20.0, 30.0);
+        System.out.println("Avarage of 10, 20 and 30 :: " + avg);
+        avg = changeArgSeq.average(10.0, 20, 30.0);
+        System.out.println("Avarage of 10, 20 and 30 :: " + avg);
+        avg = changeArgSeq.average(10.0, 20.0, 30);
+        System.out.println("Avarage of 10, 20 and 30 :: " + avg);
+    }
+}
 
-    var comparison = stringComparator.compare("hello", "world");
-    System.out.println(comparison);
+class ChangeArgSeq {
+    public double average(int a, double b, double c) {
+        return (a + b + c) / 3;
+    }
 
-    Comparator<String> stringComparatorLambda =
-      (o1, o2) -> o1.compareTo(o2);
+    public double average(double a, int b, double c) {
+        return (a + b + c) / 3;
+    }
 
-    comparison = stringComparatorLambda.compare("hello", "world");
-    System.out.println(comparison);
-
-    final String textExternal = "Text External";
-
-    MyFunction myFunction = text -> {
-      String textInternal = " Pepe";
-      System.out.println(text + textInternal + textExternal);
-
-      textInternal = " Manolo";
-      System.out.println(text + textInternal);
-    };
-
-    myFunction.apply("Hello");
-  }
+    public double average(double a, double b, long c) {
+        return (a + b + c) / 3;
+    }
 }

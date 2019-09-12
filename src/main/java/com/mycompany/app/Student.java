@@ -1,0 +1,32 @@
+package com.mycompany.app;
+
+public class Student implements Cloneable {
+    private String name;
+    private String college;
+
+    public Student() {
+        super();
+    }
+
+    public Student(String name, String college) {
+        super();
+        this.name = name;
+        this.college = college;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public void setCollege(String college) {
+        this.college = college;
+    }
+}
