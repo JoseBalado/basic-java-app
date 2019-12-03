@@ -1,5 +1,7 @@
 ### Compile with javac from the root folder
 javac src/main/java/com/mycompany/app/App.java
+
+### Run the application
 java src/main/java/com/mycompany/app/App.java
 
 ### Compile using Maven
