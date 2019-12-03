@@ -8,7 +8,7 @@
   <artifactId>my-app</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>java-app-test</name>
+  <name>basic-java-app</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
